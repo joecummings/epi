@@ -51,16 +51,33 @@ int PropogateRightMostBit(int x){
 }
 
 void PropogateRightMostBitTests(){
+	// Test 1
 	int result1 = PropogateRightMostBit(80);
 	if (result1 != 95) { throw "PropogateRightMostBit Test 1 Failed"; }
-
+	
+	// Test 2
 	int result2 = PropogateRightMostBit(0);
 	if (result2 != 0) { throw "PropogateRightMostBit Test 2 Failed"; }
+}
+
+int Modulo(int x, int y){
+	return 0;
+}
+
+void ModuloTests(){
+	// Test 1
+	int result1 = Modulo(1, 1);
+	if (result1 != 0) { throw "Modulo Test 1 Failed"; }
+	
+	// Test 2
+	int result2 = Modulo(77, 64);
+	if (result2 != 13) { printf("\x1b[31m" "Modulo Test 2 Failed" "\n"); }
 }
 
 int main(){
 	OneBitsInNumTests();
 	PropogateRightMostBitTests();
-	printf("All tests passed!");
+	ModuloTests();
+
 	return 1;
 }
