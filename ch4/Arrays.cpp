@@ -39,12 +39,12 @@ void OptimizedQuicksortTests(){
     // Test 1
     vector<int> test1 = { 1,5,3,9,2,7 };
     vector<int> result1 = OptimizedQuicksort(test1);
-    if (result1 == vector<int>{1,2,3,5,7,9}){ printf("\x1b[31m" "OptimizedQuicksort Test One Failed" "\n"); }
+    if (result1 != vector<int>{1,2,3,5,7,9}){ printf("\x1b[31m" "OptimizedQuicksort Test One Failed" "\n"); }
 
     // Test 2
     vector<int> test2 = { 0, 1 };
     vector<int> result2 = OptimizedQuicksort(test2);
-    if (result2 == vector<int>{ 0,1 }){ printf("\x1b[31m" "OptimizedQuicksort Test Two Failed" "\n"); }
+    if (result2 != vector<int>{ 0,1 }){ printf("\x1b[31m" "OptimizedQuicksort Test Two Failed" "\n"); }
 }
 
 int main(){
