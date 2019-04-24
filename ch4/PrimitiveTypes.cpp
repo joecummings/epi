@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 // Check each bit for a one until zero
 int OneBitsInNum(int x){
