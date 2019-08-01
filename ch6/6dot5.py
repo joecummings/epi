@@ -1,12 +1,15 @@
 def delete_duplicates(sorted_arr: list) -> list:
-    return delete_helper(sorted_arr[1:], sorted_arr[0])
+    
+    if len(sorted_arr) == 0:
+        return 0
+    
+    curr = 1
 
-def delete_helper(rest_arr: list, curr: int) -> list:
-    if len(rest_arr) == 2:
-        return rest_arr
-    if rest_arr[0] == curr:
-        return (delete_helper(rest_arr[1:], curr)
-    return delete_helper(rest_arr[1:], rest_arr[2]).insert(0, rest_arr[0])
+    for i in range(1, len(sorted_arr)-1):
+        if sorted_arr[curr - 1] != sorted_arr[i]:
+            curr += 1
+            sorted_arr[curr] = sorted_arr[i] 
 
-print(delete_duplicates([1,1,2,3,4]))
-assert delete_duplicates([1,1,2,3,4]) == [1,2,3,4]
+    return curr
+
+assert delete_duplicates([2,3,5,5,7,11,11,11,13]) == 6
